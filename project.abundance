@@ -13,7 +13,7 @@
         {
             "name": "Fillet val",
             "ioValue": 0.5,
-            "currentEquation": ".5"
+            "currentEquation": null
         }
     ],
     "description": "Molecules provide an organizational structure to contain atoms. Double click on a molecule to enter it. Use the up arrow in the upper right hand corner of the screen to go up one level.",
@@ -88,7 +88,7 @@
         {
             "atomType": "Input",
             "name": "3D-Shape",
-            "x": 0.025384615384615384,
+            "x": 0.028050000000000002,
             "y": 0.5,
             "uniqueID": "441433a6-c140-4c30-95b6-886de9ff6491",
             "ioValues": [],
@@ -98,7 +98,7 @@
         {
             "atomType": "Input",
             "name": "Fillet val",
-            "x": 0.025384615384615384,
+            "x": 0.028050000000000002,
             "y": 0.713855421686747,
             "uniqueID": "f918a0e3-a5e9-4913-8efa-71f0d1268f0c",
             "ioValues": [],
