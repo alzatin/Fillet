@@ -7,7 +7,7 @@
   "ioValues": [
     {
       "name": "Fillet val",
-      "ioValue": null
+      "ioValue": .5
     },
     {
       "name": "3D-Shape",
@@ -30,7 +30,7 @@
       "ioValues": [
         {
           "name": "fillet",
-          "ioValue": null
+          "ioValue": .5
         }
       ],
       "codeVersion": 1,
