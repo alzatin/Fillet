@@ -7,7 +7,7 @@
   "ioValues": [
     {
       "name": "Fillet val",
-      "ioValue": 0.5
+      "ioValue": null
     },
     {
       "name": "3D-Shape",
@@ -24,17 +24,17 @@
     },
     {
       "atomType": "Code",
-      "x": 0.4932773109243697,
-      "y": 0.5981873111782477,
+      "x": 0.5899159663865546,
+      "y": 0.5800604229607251,
       "uniqueID": "ccb8b39a-cb4c-45c3-bb03-7896b12d87a6",
       "ioValues": [
         {
           "name": "fillet",
-          "ioValue": 0.5
+          "ioValue": null
         }
       ],
       "codeVersion": 1,
-      "code": "\n      const Inputs = [\n       {inputName: \"shape\", type: \"geometry\", defaultValue: null},\n      {inputName: \"fillet\", type: \"number\", defaultValue: .5},\n      \n      ]\n      //This defines the molecules inputs and creates variables with the same names which can be referenced in the code\n\n      //Takes the address and gets the shape from the library\n      let importedShape = library[shape]\n\n      //This makes a new copy of the shape and moves it in the X direction\n      let filletShape = importedShape.geometry[0].clone().fillet(fillet)\n\n      //Console.log works for debugging to better see what is happening under the hood\n      console.log(\"Shape:\")\n      console.log(importedShape);\n\n      //Shapes stored in the library have tags, a color, a plane, and a bill of materials like this. We don't modify them here\n      let shape1 = {\n        geometry: [filletShape],\n        tags: importedShape.tags,\n        color: importedShape.color,\n        plane: importedShape.plane,\n        bom: importedShape.bom\n      }\n\n    return shape1\n      "
+      "code": "\n      const Inputs = [\n       {inputName: \"shape\", type: \"geometry\", defaultValue: null},\n      {inputName: \"fillet\", type: \"number\", defaultValue: .5},\n      \n      ]\n      //This defines the molecules inputs and creates variables with the same names which can be referenced in the code\n\n      //Takes the address and gets the shape from the library\n      let importedShape = library[shape]\n\n      //This makes a new copy of the shape and moves it in the X direction\n      //let filletShape = importedShape.geometry[0].clone().fillet(fillet)\n      let filletAssembly =  await Fillet(importedShape, fillet)\n\n      //Console.log works for debugging to better see what is happening under the hood\n      console.log(\"Shape:\")\n      console.log(importedShape);\n\n      //Shapes stored in the library have tags, a color, a plane, and a bill of materials like this. We don't modify them here\n      let shape1 = {\n        geometry: [filletAssembly],\n        tags: importedShape.tags,\n        color: importedShape.color,\n        plane: importedShape.plane,\n        bom: importedShape.bom\n      }\n\n    return shape1\n      "
     },
     {
       "atomType": "Circle",
@@ -50,8 +50,8 @@
     },
     {
       "atomType": "Extrude",
-      "x": 0.42521008403361343,
-      "y": 0.3564954682779456,
+      "x": 0.32941176470588235,
+      "y": 0.2054380664652568,
       "uniqueID": "a00c2555-b09c-4c5e-9f0f-7b1e87b2db17",
       "ioValues": [
         {
@@ -75,6 +75,18 @@
       "uniqueID": "f918a0e3-a5e9-4913-8efa-71f0d1268f0c",
       "name": "Fillet val",
       "type": "number"
+    },
+    {
+      "atomType": "Assembly",
+      "x": 0.5226890756302521,
+      "y": 0.2779456193353474,
+      "uniqueID": "id-17",
+      "ioValues": [
+        {
+          "name": "Shape 1",
+          "ioValue": null
+        }
+      ]
     }
   ],
   "allConnectors": [
@@ -87,6 +99,11 @@
       "ap2Name": "geometry",
       "ap1ID": "8bfc20d5-0ae4-4614-8943-bc8f325147cf",
       "ap2ID": "a00c2555-b09c-4c5e-9f0f-7b1e87b2db17"
+    },
+    {
+      "ap2Name": "Shape 1",
+      "ap1ID": "a00c2555-b09c-4c5e-9f0f-7b1e87b2db17",
+      "ap2ID": "id-17"
     },
     {
       "ap2Name": "shape",
