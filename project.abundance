@@ -24,8 +24,8 @@
     },
     {
       "atomType": "Code",
-      "x": 0.5899159663865546,
-      "y": 0.5800604229607251,
+      "x": 0.5848739495798319,
+      "y": 0.5921450151057402,
       "uniqueID": "ccb8b39a-cb4c-45c3-bb03-7896b12d87a6",
       "ioValues": [
         {
@@ -62,16 +62,16 @@
     },
     {
       "atomType": "Input",
-      "x": 0.0264,
-      "y": 0.16,
+      "x": 0.031349999999999996,
+      "y": 0.19,
       "uniqueID": "441433a6-c140-4c30-95b6-886de9ff6491",
       "name": "3D-Shape",
       "type": "geometry"
     },
     {
       "atomType": "Input",
-      "x": 0.0264,
-      "y": 0.256,
+      "x": 0.031349999999999996,
+      "y": 0.304,
       "uniqueID": "f918a0e3-a5e9-4913-8efa-71f0d1268f0c",
       "name": "Fillet val",
       "type": "number"
@@ -85,6 +85,39 @@
         {
           "name": "Shape 1",
           "ioValue": null
+        },
+        {
+          "name": "Shape 2",
+          "ioValue": null
+        }
+      ]
+    },
+    {
+      "atomType": "Rectangle",
+      "x": 0.26134453781512607,
+      "y": 0.7885196374622356,
+      "uniqueID": "id-36",
+      "ioValues": [
+        {
+          "name": "x length",
+          "ioValue": 10
+        },
+        {
+          "name": "y length",
+          "ioValue": 10
+        }
+      ]
+    },
+    {
+      "atomType": "Extrude",
+      "x": 0.3521008403361344,
+      "y": 0.7885196374622356,
+      "uniqueID": "id-40",
+      "ioValues": [
+        {
+          "name": "height",
+          "ioValue": 2,
+          "currentEquation": "2"
         }
       ]
     }
@@ -114,6 +147,16 @@
       "ap2Name": "fillet",
       "ap1ID": "f918a0e3-a5e9-4913-8efa-71f0d1268f0c",
       "ap2ID": "ccb8b39a-cb4c-45c3-bb03-7896b12d87a6"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-36",
+      "ap2ID": "id-40"
+    },
+    {
+      "ap2Name": "Shape 2",
+      "ap1ID": "id-40",
+      "ap2ID": "id-17"
     }
   ],
   "unitsKey": "Inches",
