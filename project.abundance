@@ -6,12 +6,12 @@
   "name": "Fillet",
   "ioValues": [
     {
-      "name": "Fillet val",
-      "ioValue": 0.5
+      "name": "3D-Shape",
+      "ioValue": "__GEOMETRY_INPUT__"
     },
     {
-      "name": "3D-Shape",
-      "ioValue": 10
+      "name": "Fillet val",
+      "ioValue": 0.5
     }
   ],
   "topLevel": true,
@@ -20,17 +20,31 @@
       "atomType": "Output",
       "x": 0.98,
       "y": 0.5,
-      "uniqueID": "bf30955a-459c-43a0-819d-ac2a750408c6"
+      "uniqueID": "bf30955a-459c-43a0-819d-ac2a750408c6",
+      "ioValues": [
+        {
+          "name": "number or geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        }
+      ]
     },
     {
       "atomType": "Code",
-      "x": 0.5181236673773987,
-      "y": 0.4924471299093656,
+      "x": 0.5820000000000001,
+      "y": 0.6253776435045317,
       "uniqueID": "ccb8b39a-cb4c-45c3-bb03-7896b12d87a6",
       "ioValues": [
         {
           "name": "fillet",
           "ioValue": 0.5
+        },
+        {
+          "name": "shape",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "shape2",
+          "ioValue": "__GEOMETRY_INPUT__"
         }
       ],
       "codeVersion": 1,
@@ -55,6 +69,10 @@
       "uniqueID": "a00c2555-b09c-4c5e-9f0f-7b1e87b2db17",
       "ioValues": [
         {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
           "name": "height",
           "ioValue": 10
         }
@@ -62,24 +80,24 @@
     },
     {
       "atomType": "Input",
-      "x": 0.0264,
-      "y": 0.16,
+      "x": 0.031349999999999996,
+      "y": 0.19,
       "uniqueID": "441433a6-c140-4c30-95b6-886de9ff6491",
       "name": "3D-Shape",
       "type": "geometry"
     },
     {
       "atomType": "Input",
-      "x": 0.0264,
-      "y": 0.256,
+      "x": 0.031349999999999996,
+      "y": 0.2930513595166163,
       "uniqueID": "f918a0e3-a5e9-4913-8efa-71f0d1268f0c",
       "name": "Fillet val",
       "type": "number"
     },
     {
       "atomType": "Assembly",
-      "x": 0.5226890756302521,
-      "y": 0.2779456193353474,
+      "x": 0.6533333333333333,
+      "y": 0.25075528700906347,
       "uniqueID": "id-17",
       "ioValues": [
         {
@@ -114,6 +132,10 @@
       "y": 0.7885196374622356,
       "uniqueID": "id-40",
       "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
         {
           "name": "height",
           "ioValue": 2
